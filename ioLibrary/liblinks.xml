@@ -1,0 +1,29 @@
+<!-- liblinks.xml
+
+     Code Red Technologies "Smart update wizard" script file
+     When executed on a particular application project, will
+     add appropriate links to the specified library project.
+
+     Note that this script assumes that the application project
+     contains the standard 'Debug' and 'Release' build 
+     configurations.
+-->
+
+<project name="" update="true">
+	<setting id="all.compiler.inc">
+		<value>${workspace_loc:/ioLibrary/}</value>
+        </setting>
+	<setting id="linker.libs">
+		<value>ioLibrary</value>
+	</setting>
+	<setting id="linker.paths" buildType="Debug">
+		<value>${workspace_loc:/ioLibrary/Debug}</value>
+	</setting>
+	<setting id="linker.paths" buildType="Release">
+		<value>${workspace_loc:/ioLibrary/Release}</value>
+	</setting>
+	<requires msg="Library project `ioLibrary` not found">
+		<value>ioLibrary</value>
+	</requires>
+</project>
+
