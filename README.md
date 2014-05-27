@@ -1,6 +1,4 @@
 # W5500 EVB
-=========
-
 - W5500 chip development platform for **net'enabled** microcotroller applications
 - Ethernet (W5500 Hardwired TCP/IP chip) and 32-bit ARM® Cortex™-M0 based designs
 - Arduino Pin-compatible platform hardware
