@@ -20,7 +20,7 @@ For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.
   - 96kB on-chip flash / 12kB on-chip SRAM / 4kB on-chip EEPROM / Various peripherals
 - Pin-compatible with Arduino Shields designed for the UNO Rev3
 - On-board Temperature sensor / Potentiometer
-- 2 x User push button switch(SW), 1 x RGB LED, 4-Mbit External Serial Dataflash memory
+- 2 x Push button switch(SW), 1 x RGB LED, 4-Mbit External Serial Dataflash memory
 - Ethernet / USB-mini B connector and 10-pin Cortex debug connector for SWD(Serial Wire Debug)
 - W5500 EVB Arduino Compatible Pinout
 ![W5500 EVB Arduino Compatible Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_arduino_pin_map.png "W5500 EVB Arduino Compatible Pinout")
