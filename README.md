@@ -22,11 +22,10 @@ For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.
 - Pin-compatible with Arduino Shields designed for the UNO Rev3
 - Ethernet / USB-mini B connector and 10-pin Cortex debug connector for SWD(Serial Wire Debug)
 
+- W5500 EVB Arduino Compatible Pinout
+![W5500 EVB Arduino Compatible Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_arduino_pin_map.png "W5500 EVB Arduino Compatible Pinout")
 
-<!-- W5500 EVB Arduino comatible Pinout -->
-![W5500 EVB Arduino Comptible Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_arduino_pin_map.png "W5500 EVB Arduino Compatible Pinout")
-
-<!-- W5500 EVB External Pinout -->
+- W5500 EVB External Pinout
 ![W5500 EVB External Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_external_pin_map.png "W5500 EVB External Pinout")
 
 ## Software
