@@ -19,7 +19,7 @@ For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.
 - Ethernet / USB-mini B connector and 10-pin Cortex debug connector for SWD(Serial Wire Debug)
 
 <!-- W5500 EVB pic -->
-![W5500 EVB](http://wizwiki.net/files/-.jpg "W5500 EVB")
+![W5500 EVB](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500-evb_side.png "W5500 EVB")
 
 <!-- W5500 EVB pinout -->
 ![W5500 EVB Pinout](http://wizwiki.net/files/-.jpg "W5500 EVB Pinout")
