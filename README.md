@@ -3,6 +3,10 @@
 - Ethernet (W5500 Hardwired TCP/IP chip) and 32-bit ARM® Cortex™-M0 based designs
 - Arduino Pin-compatible platform hardware
 
+<!-- W5500 EVB pic -->
+![W5500 EVB](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500-evb_side.png "W5500 EVB")
+
+
 For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.php?id=products:w5500:w5500_evb) in WIZnet Wiki.
 
 ## Features
@@ -18,11 +22,12 @@ For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.
 - Pin-compatible with Arduino Shields designed for the UNO Rev3
 - Ethernet / USB-mini B connector and 10-pin Cortex debug connector for SWD(Serial Wire Debug)
 
-<!-- W5500 EVB pic -->
-![W5500 EVB](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500-evb_side.png "W5500 EVB")
 
-<!-- W5500 EVB pinout -->
-![W5500 EVB Pinout](http://wizwiki.net/files/-.jpg "W5500 EVB Pinout")
+<!-- W5500 EVB Arduino comatible Pinout -->
+![W5500 EVB Arduino Comptible Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_arduino_pin_map.png "W5500 EVB Arduino Compatible Pinout")
+
+<!-- W5500 EVB External Pinout -->
+![W5500 EVB External Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_external_pin_map.png "W5500 EVB External Pinout")
 
 ## Software
 These are libraries source code and example projects based on LPCXpresso IDE.
