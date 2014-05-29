@@ -18,8 +18,9 @@ For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.
 - NXP LPC11E36/501 MCU (LPC11E36FHN33)
   - 32-bit ARM® Cortex™-M0 microcontroller running at up to 50MHz
   - 96kB on-chip flash / 12kB on-chip SRAM / 4kB on-chip EEPROM / Various peripherals
-- On-board Temperature sensor / Potentiometer
 - Pin-compatible with Arduino Shields designed for the UNO Rev3
+- On-board Temperature sensor / Potentiometer
+- 2 x User push button switch(SW), 1 x RGB LED, 4-Mbit External Serial Dataflash memory
 - Ethernet / USB-mini B connector and 10-pin Cortex debug connector for SWD(Serial Wire Debug)
 
 - W5500 EVB Arduino Compatible Pinout
