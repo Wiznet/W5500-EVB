@@ -6,10 +6,6 @@
 <!-- W5500 EVB pic -->
 ![W5500 EVB](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500-evb_side.png "W5500 EVB")
 
-![W5500 EVB Composition](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_composition.png "W5500 EVB Composition")
-
-
-
 For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.php?id=products:w5500:w5500_evb) in WIZnet Wiki.
 
 ## Features
