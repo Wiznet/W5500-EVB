@@ -1,4 +1,4 @@
-# W5500 EVB
+# W5500 EVB: HTTP Server
 - W5500 chip development platform for **net'enabled** microcotroller applications
 - Ethernet (W5500 Hardwired TCP/IP chip) and 32-bit ARM® Cortex™-M0 based designs
 - Arduino Pin-compatible platform hardware
@@ -35,11 +35,9 @@ Requried Libraries are as below.
 - ioLibrary (WIZnet W5500 EVB ethernet library and protocols)
 
 Example projects are as below.
-- Basic demos (LED blinky and loopback test)
-- DHCP client
-- DNS clinet
-- On-board Temperature sensor
-- On-board Potentiometer
+- HTTP Server
+  - Digital I/O control example (RGB LED)
+  - Analog Input monitor example (Potentiometer / Temp.sensor)
 
 ## Hardware material, Documents and Others
 Various materials are could be found at [W5500 EVB page](http://wizwiki.net/wiki/doku.php?id=products:w5500:w5500_evb) in WIZnet Wiki.
