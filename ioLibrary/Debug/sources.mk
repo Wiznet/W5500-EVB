@@ -14,12 +14,9 @@ ARCHIVES :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Internet/httpServer \
-Internet/NTP \
 Internet/DNS \
 Internet/DHCP \
 Ethernet \
 Ethernet/W5500 \
-Appmod/Twitter_post \
 Appmod/Loopback \
 

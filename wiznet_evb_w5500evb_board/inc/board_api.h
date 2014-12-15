@@ -83,12 +83,6 @@ void Board_UARTPutChar(char ch);
 int Board_UARTGetChar(void);
 
 /**
- * @brief	Get a single character from the UART, required for scanf input, operate on blocking mode
- * @return	EOF if not character was received, or character value
- */
-int Board_UARTGetCharBlocking(void);
-
-/**
  * @brief	Prints a string to the UART
  * @param	str	: Terminated string to output
  * @return	None

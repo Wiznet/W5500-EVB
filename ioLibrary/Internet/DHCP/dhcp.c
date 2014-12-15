@@ -576,7 +576,7 @@ int8_t parseDHCPMSG(void)
 
 	uint8_t * p;
 	uint8_t * e;
-	uint8_t type = 0;
+	uint8_t type;
 	uint8_t opt_len;
    
    if((len = getSn_RX_RSR(DHCP_SOCKET)) > 0)
@@ -606,7 +606,6 @@ int8_t parseDHCPMSG(void)
    			   p = e;   // for break while(p < e)
    				break;
             case padOption :
-            	opt_len = 1; // ## 20140729 Added for parse the zero padding fields
    				p++;
    				break;
    			case dhcpMessageType :
@@ -916,7 +915,7 @@ void DHCP_init(uint8_t s, uint8_t * buf)
 
 	// WIZchip Netinfo Clear
 	setSIPR(zeroip);
-	setSUBR(zeroip);
+	setSIPR(zeroip);
 	setGAR(zeroip);
 
 	reset_DHCP_timeout();

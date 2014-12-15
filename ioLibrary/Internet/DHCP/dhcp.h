@@ -51,7 +51,7 @@
  * @note    If defined, it depends on <stdio.h>
  */
 
-#define _DHCP_DEBUG_
+//#define _DHCP_DEBUG_
 
 /* Retry to processing DHCP */
 #define	MAX_DHCP_RETRY          2        ///< Maximum retry count

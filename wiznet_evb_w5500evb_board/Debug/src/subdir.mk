@@ -6,20 +6,17 @@
 C_SRCS += \
 ../src/board.c \
 ../src/board_sysinit.c \
-../src/w5500_spi.c \
-../src/w5500evb_dataflash.c 
+../src/w5500_spi.c 
 
 OBJS += \
 ./src/board.o \
 ./src/board_sysinit.o \
-./src/w5500_spi.o \
-./src/w5500evb_dataflash.o 
+./src/w5500_spi.o 
 
 C_DEPS += \
 ./src/board.d \
 ./src/board_sysinit.d \
-./src/w5500_spi.d \
-./src/w5500evb_dataflash.d 
+./src/w5500_spi.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

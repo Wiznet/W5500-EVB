@@ -27,8 +27,8 @@ void Init_SSP_PinMux(void)
 	Chip_IOCON_PinMuxSet(LPC_IOCON, 0, 2, (IOCON_FUNC0 | IOCON_MODE_PULLUP));
 	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 0,  2);	// SSEL(CS) as GPIO output
 
-	//Chip_IOCON_PinMuxSet(LPC_IOCON, 0, 3, (IOCON_FUNC0 | IOCON_MODE_PULLUP));
-	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 0, 3);	// N_RESET as GPIO output for W5500-EVB
+	//Chip_IOCON_PinMuxSet(LPC_IOCON, 0, 22, (IOCON_FUNC0 | IOCON_MODE_PULLUP));
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 0, 22);	// N_RESET as GPIO output
 }
 
 void  wizchip_select(void)
@@ -53,16 +53,6 @@ void  wizchip_write(uint8_t wb)
 	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, &wb, 1);
 }
 
-void wizchip_readburst(uint8_t* pBuf, uint16_t len)
-{
-	Chip_SSP_ReadFrames_Blocking(LPC_SSP0, pBuf, len);
-}
-
-void  wizchip_writeburst(uint8_t* pBuf, uint16_t len)
-{
-	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, pBuf, len);
-}
-
 void SPI_Init()
 {
 	/* SSP initialization */
@@ -71,7 +61,7 @@ void SPI_Init()
 
 	Chip_SSP_SetFormat(LPC_SSP0, SSP_BITS_8, SSP_FRAMEFORMAT_SPI, SSP_CLOCK_MODE0);
 	Chip_SSP_SetMaster(LPC_SSP0, true);
-	Chip_SSP_SetBitRate(LPC_SSP0, 20000000); // 20MHz
+	Chip_SSP_SetBitRate(LPC_SSP0, 10000000); // 10MHz
 	Chip_SSP_Enable(LPC_SSP0);
 }
 
@@ -82,16 +72,15 @@ void W5500_Init()
 
 	Chip_GPIO_SetPinState(LPC_GPIO, 0, 2, true);	// SSEL(CS)
 
-	Chip_GPIO_SetPinState(LPC_GPIO, 0, 3, false);	// N_RESET
+	Chip_GPIO_SetPinState(LPC_GPIO, 0, 22, false);	// N_RESET
 	tmp = 0xFF;
 	while(tmp--);
-	Chip_GPIO_SetPinState(LPC_GPIO, 0, 3, true);	// N_RESET
+	Chip_GPIO_SetPinState(LPC_GPIO, 0, 22, true);	// N_RESET
 
 	reg_wizchip_cs_cbfunc(wizchip_select, wizchip_deselect);
 	reg_wizchip_spi_cbfunc(wizchip_read, wizchip_write);
-	reg_wizchip_spiburst_cbfunc(wizchip_readburst, wizchip_writeburst);
 
-	/* WIZChip Initialize*/
+	/* wizchip initialize*/
 	if (ctlwizchip(CW_INIT_WIZCHIP, (void*) memsize) == -1) {
 		printf("WIZCHIP Initialized fail.\r\n");
 		while (1);
