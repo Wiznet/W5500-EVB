@@ -351,7 +351,10 @@ int32_t sendto(uint8_t sn, uint8_t * buf, uint16_t len, uint8_t * addr, uint16_t
 {
    uint8_t tmp = 0;
    uint16_t freesize = 0;
+   uint32_t taddr;
+
    CHECK_SOCKNUM();
+
    switch(getSn_MR(sn) & 0x0F)
    {
       case Sn_MR_UDP:
@@ -363,16 +366,17 @@ int32_t sendto(uint8_t sn, uint8_t * buf, uint16_t len, uint8_t * addr, uint16_t
    CHECK_SOCKDATA();
    //M20140501 : For avoiding fatal error on memory align mismatched
    //if(*((uint32_t*)addr) == 0) return SOCKERR_IPINVALID;
-   {
-      uint32_t taddr;
+   //{
+      //uint32_t taddr;
       taddr = ((uint32_t)addr[0]) & 0x000000FF;
       taddr = (taddr << 8) + ((uint32_t)addr[1] & 0x000000FF);
       taddr = (taddr << 8) + ((uint32_t)addr[2] & 0x000000FF);
       taddr = (taddr << 8) + ((uint32_t)addr[3] & 0x000000FF);
-   }
+   //}
    //
-   if(*((uint32_t*)addr) == 0) return SOCKERR_IPINVALID;
-   if(port == 0)               return SOCKERR_PORTZERO;
+   //if(*((uint32_t*)addr) == 0) return SOCKERR_IPINVALID;
+   if(taddr == 0) 				return SOCKERR_IPINVALID;
+   if(port == 0)               	return SOCKERR_PORTZERO;
    tmp = getSn_SR(sn);
    if(tmp != SOCK_MACRAW && tmp != SOCK_UDP) return SOCKERR_SOCKSTATUS;
       

@@ -107,19 +107,19 @@
 									<listOptionValue builtIn="false" value="__LPC11EXX__"/>
 								</option>
 								<option id="gnu.c.compiler.option.misc.other.2147390722" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections" valueType="string"/>
-								<option id="gnu.c.compiler.option.include.paths.1329635504" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+								<option id="gnu.c.compiler.option.include.paths.1329635504" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wiznet_evb_w5500evb_board/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lpc_chip_11exx/inc}&quot;"/>
 								</option>
-								<option id="com.crt.advproject.gcc.lib.release.option.optimization.level.1935213493" superClass="com.crt.advproject.gcc.lib.release.option.optimization.level" value="gnu.c.optimization.level.size" valueType="enumerated"/>
-								<option id="com.crt.advproject.gcc.hdrlib.1703756666" superClass="com.crt.advproject.gcc.hdrlib" value="Redlib" valueType="enumerated"/>
+								<option id="com.crt.advproject.gcc.lib.release.option.optimization.level.1935213493" name="Optimization Level" superClass="com.crt.advproject.gcc.lib.release.option.optimization.level" value="gnu.c.optimization.level.size" valueType="enumerated"/>
+								<option id="com.crt.advproject.gcc.hdrlib.1703756666" name="Library headers" superClass="com.crt.advproject.gcc.hdrlib" value="Redlib" valueType="enumerated"/>
 								<inputType id="com.crt.advproject.compiler.input.1350166819" superClass="com.crt.advproject.compiler.input"/>
 							</tool>
 							<tool id="com.crt.advproject.gas.lib.release.671739833" name="MCU Assembler" superClass="com.crt.advproject.gas.lib.release">
 								<option id="com.crt.advproject.gas.arch.213778172" name="Architecture" superClass="com.crt.advproject.gas.arch" value="com.crt.advproject.gas.target.cm0" valueType="enumerated"/>
 								<option id="com.crt.advproject.gas.thumb.1505728346" name="Thumb mode" superClass="com.crt.advproject.gas.thumb" value="true" valueType="boolean"/>
 								<option id="gnu.both.asm.option.flags.crt.636857169" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -D__REDLIB__ -DNDEBUG -D__CODE_RED" valueType="string"/>
-								<option id="com.crt.advproject.gas.hdrlib.1746569896" superClass="com.crt.advproject.gas.hdrlib" value="Redlib" valueType="enumerated"/>
+								<option id="com.crt.advproject.gas.hdrlib.1746569896" name="Library headers" superClass="com.crt.advproject.gas.hdrlib" value="Redlib" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1836683907" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.crt.advproject.assembler.input.1234273347" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
 							</tool>
@@ -180,7 +180,14 @@
 &lt;/infoList&gt;&#13;
 &lt;/TargetConfig&gt;</projectStorage>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/ioLibrary"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/ioLibrary"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="com.crt.advproject.config.lib.debug.1619934250;com.crt.advproject.config.lib.debug.1619934250.;com.crt.advproject.gas.lib.debug.132444536;com.crt.advproject.assembler.input.1555578177">

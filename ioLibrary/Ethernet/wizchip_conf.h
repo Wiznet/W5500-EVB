@@ -188,6 +188,8 @@ typedef struct __WIZCHIP
       {
          uint8_t (*_read_byte)   (void);
          void    (*_write_byte)  (uint8_t wb);
+         void    (*_read_burst)  (uint8_t* pBuf, uint16_t len);
+         void    (*_write_burst)  (uint8_t* pBuf, uint16_t len);
       }SPI;
       // To be added
       //
@@ -203,7 +205,7 @@ extern _WIZCHIP  WIZCHIP;
 typedef enum
 {
    CW_RESET_WIZCHIP,   ///< Resets WIZCHIP by softly
-   CW_INIT_WIZCHIP,    ///< Inializes to WIZCHIP with SOCKET buffer size 2 or 1 dimension array typed uint8_t.
+   CW_INIT_WIZCHIP,    ///< Initializes to WIZCHIP with SOCKET buffer size 2 or 1 dimension array typed uint8_t.
    CW_GET_INTERRUPT,   ///< Get Interrupt status of WIZCHIP
    CW_CLR_INTERRUPT,   ///< Clears interrupt
    CW_SET_INTRMASK,    ///< Masks interrupt
@@ -214,10 +216,10 @@ typedef enum
 
 #if _WIZCHIP_ ==  5500
    CW_RESET_PHY,       ///< Resets internal PHY. Valid Only W5000
-   CW_SET_PHYCONF,     ///< When PHY configured by interal register, PHY operation mode (Manual/Auto, 10/100, Half/Full). Valid Only W5000 
-   CW_GET_PHYCONF,     ///< Get PHY operation mode in interal register. Valid Only W5000
+   CW_SET_PHYCONF,     ///< When PHY configured by internal register, PHY operation mode (Manual/Auto, 10/100, Half/Full). Valid Only W5000
+   CW_GET_PHYCONF,     ///< Get PHY operation mode in internal register. Valid Only W5000
    CW_GET_PHYSTATUS,   ///< Get real PHY status on operating. Valid Only W5000
-   CW_SET_PHYPOWMODE,  ///< Set PHY power mode as noraml and down when PHYSTATUS.OPMD == 1. Valid Only W5000
+   CW_SET_PHYPOWMODE,  ///< Set PHY power mode as normal and down when PHYSTATUS.OPMD == 1. Valid Only W5000
 #endif
    CW_GET_PHYPOWMODE,  ///< Get PHY Power mode as down or normal
    CW_GET_PHYLINK      ///< Get PHY Link status
@@ -252,7 +254,7 @@ typedef enum
    IK_PPPOE_TERMINATED  = (1 << 5),   ///< PPPoE Disconnected
 
 #if _WIZCHIP_ != 5200
-   IK_DEST_UNREACH      = (1 << 6),   ///< Destination IP & Port Unreable, No use in W5200
+   IK_DEST_UNREACH      = (1 << 6),   ///< Destination IP & Port Unreachable, No use in W5200
 #endif   
 
    IK_IP_CONFLICT       = (1 << 7),   ///< IP conflict occurred
@@ -269,9 +271,9 @@ typedef enum
 #endif   
 
 #if _WIZCHIP_ > 5100
-   IK_SOCK_ALL          = (0xFF << 8) ///< All Socket interrpt
+   IK_SOCK_ALL          = (0xFF << 8) ///< All Socket interrupt
 #else
-   IK_SOCK_ALL          = (0x0F << 8) ///< All Socket interrpt 
+   IK_SOCK_ALL          = (0x0F << 8) ///< All Socket interrupt
 #endif      
 }intr_kind;
 
@@ -387,13 +389,23 @@ void reg_wizchip_bus_cbfunc(uint8_t (*bus_rb)(uint32_t addr), void (*bus_wb)(uin
 
 /**
  *@brief Registers call back function for SPI interface.
- *@param spi_rb : callback function to read byte usig SPI 
- *@param spi_wb : callback function to write byte usig SPI 
+ *@param spi_rb : callback function to read byte using SPI
+ *@param spi_wb : callback function to write byte using SPI
  *@todo Describe \ref wizchip_spi_readbyte and \ref wizchip_spi_writebyte function
  *or register your functions.
  *@note If you do not describe or register, null function is called.
  */
 void reg_wizchip_spi_cbfunc(uint8_t (*spi_rb)(void), void (*spi_wb)(uint8_t wb));
+
+/**
+ *@brief Registers call back function for SPI interface.
+ *@param spi_rb : callback function to burst read using SPI
+ *@param spi_wb : callback function to burst write using SPI
+ *@todo Describe \ref wizchip_spi_readbyte and \ref wizchip_spi_writebyte function
+ *or register your functions.
+ *@note If you do not describe or register, null function is called.
+ */
+void reg_wizchip_spiburst_cbfunc(void (*spi_rb)(uint8_t* pBuf, uint16_t len), void (*spi_wb)(uint8_t* pBuf, uint16_t len));
 
 /**
  * @ingroup extra_functions
