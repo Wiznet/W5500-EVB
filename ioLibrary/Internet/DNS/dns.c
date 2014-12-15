@@ -2,7 +2,7 @@
 //
 //! \file dns.c
 //! \brief DNS APIs Implement file.
-//! \details Send DNS query & Receive DNS reponse.  \n
+//! \details Send DNS query & Receive DNS response.  \n
 //!          It depends on stdlib.h & string.h in ansi-c library
 //! \version 1.1.0
 //! \date 2013/11/18
@@ -516,8 +516,8 @@ int8_t DNS_run(uint8_t * dns_ip, uint8_t * name, uint8_t * ip_from_dns)
 	uint16_t len, port;
 	int8_t ret_check_timeout;
    
-   // Socket open
-   socket(DNS_SOCKET, Sn_MR_UDP, 0, 0);
+	// Socket open
+	socket(DNS_SOCKET, Sn_MR_UDP, 0, 0);
 
 #ifdef _DNS_DEBUG_
 	printf("> DNS Query to DNS Server : %d.%d.%d.%d\r\n", dns_ip[0], dns_ip[1], dns_ip[2], dns_ip[3]);
