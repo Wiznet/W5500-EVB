@@ -36,6 +36,8 @@ Requried Libraries are as below.
 
 Example projects are as below.
 - HTTP Server
+  - Web content loader
+  - Code & JavaScript examples correspond to I/O CGI
   - Digital I/O control example (RGB LED)
   - Analog Input monitor example (Potentiometer / Temp.sensor)
 
