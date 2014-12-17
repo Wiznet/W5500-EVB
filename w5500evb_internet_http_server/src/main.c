@@ -79,9 +79,9 @@ uint8_t TX_BUF[DATA_BUF_SIZE];
 // Network Configuration //
 ///////////////////////////
 wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x08, 0xdc, 0xab, 0xcd, 0xef},
-                            .ip = {192, 168, 11, 112},
+                            .ip = {192, 168, 0, 112},
                             .sn = {255, 255, 255, 0},
-                            .gw = {192, 168, 11, 1},
+                            .gw = {192, 168, 0, 1},
                             .dns = {0, 0, 0, 0},
                             .dhcp = NETINFO_STATIC };
 
@@ -187,20 +187,20 @@ int main(void) {
 	Display_Net_Conf(); // Print out the network information to serial terminal
 #endif
 
-
-	httpServer_init(TX_BUF, RX_BUF, MAX_HTTPSOCK, socknumlist);
-	reg_httpServer_cbfunc(NVIC_SystemReset, NULL); // Callback: NXP MCU Reset
+	/* HTTP Server Initialization  */
+	httpServer_init(TX_BUF, RX_BUF, MAX_HTTPSOCK, socknumlist);		// Tx/Rx buffers (2kB) / The number of W5500 chip H/W sockets in use
+	reg_httpServer_cbfunc(NVIC_SystemReset, NULL); 					// Callback: NXP MCU Reset
 
 	{
-		// Web content register
-		reg_httpServer_webContent((uint8_t *)"index.html", index_page_array);
+		// Web content registration (web content in webpage.h)
+		reg_httpServer_webContent((uint8_t *)"index.html", index_page_array);			// index.html : Main page example
 
-		//reg_httpServer_webContent((uint8_t *)"dio.html", (uint8_t *)dio_page);
-		//reg_httpServer_webContent((uint8_t *)"ain.html", (uint8_t *)ain_page);
+		reg_httpServer_webContent((uint8_t *)"dio.html", (uint8_t *)dio_page);			// dio.html : Digital I/O control example page
+		reg_httpServer_webContent((uint8_t *)"ain.html", (uint8_t *)ain_page);			// ain.html : Analog input monitor example page
 
-		//reg_httpServer_webContent((uint8_t *)"dio.js", (uint8_t *)wiz550web_dio_js);
-		//reg_httpServer_webContent((uint8_t *)"ain.js", (uint8_t *)wiz550web_ain_js);
-		//reg_httpServer_webContent((uint8_t *)"ajax.js", (uint8_t *)wiz550web_ajax_js);
+		reg_httpServer_webContent((uint8_t *)"dio.js", (uint8_t *)wiz550web_dio_js);	// dio.js 	: JavaScript for digital I/O control 	(+ ajax.js)
+		reg_httpServer_webContent((uint8_t *)"ain.js", (uint8_t *)wiz550web_ain_js);	// ain.js 	: JavaScript for Analog input monitor	(+ ajax.js)
+		reg_httpServer_webContent((uint8_t *)"ajax.js", (uint8_t *)wiz550web_ajax_js);	// ajax.js	: JavaScript for AJAX request transfer
 
 #ifdef _MAIN_DEBUG_
 		display_reg_webContent_list();
