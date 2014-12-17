@@ -99,7 +99,7 @@ uint8_t predefined_get_cgi_processor(uint8_t * uri_name, uint8_t * buf, uint16_t
 
 uint8_t predefined_set_cgi_processor(uint8_t * uri_name, uint8_t * uri, uint8_t * buf, uint16_t * len)
 {
-	uint8_t ret = 1;	// ret = 1 means 'uri_name' matched
+	uint8_t ret = 1;	// ret = '1' means 'uri_name' matched
 	uint8_t val = 0;
 
 	if(strcmp((const char *)uri_name, "todo.cgi") == 0)
@@ -140,9 +140,9 @@ void make_json_dio(uint8_t * buf, uint16_t * len, uint8_t pin)
 											\"dio_s\":\"%d\",\
 											\"dio_d\":\"%d\"\
 											});",
-											pin,		// Digital io pin number
-											pin_state,	// Digital io status
-											pin_dir		// Digital io directions
+											pin,					// Digital io pin number
+											pin_state,				// Digital io status
+											pin_dir					// Digital io directions
 											);
 }
 

@@ -37,7 +37,7 @@ extern uint8_t index_page_array[];
 							"}"
 
 /* Get: Analog Input: 	function AinCallback(o), getAin(o) */
-/* Additional function: function AinDrawgraph(o) */
+/* Additional function: function AinDrawgraph(o), getAin6_update() */
 #define wiz550web_ain_js	"function AinCallback(o){"\
 								"var pin = o.ain_p;"\
 								"$('txtain_v'+pin).value=o.ain_v;"\
@@ -73,11 +73,18 @@ extern uint8_t index_page_array[];
 								"<script type='text/javascript' src='dio.js'></script>"\
 								"</head>"\
 								"<body>"\
+									"<!-- to do -->"\
 									"<div>"\
-									"<input type='button' value='LED R On' pin='10' s='0' onclick='setDiostate(this);'> "\
-									"<input type='button' value='LED R Off' pin='10' s= '1' onclick='setDiostate(this);'>"\
-									"<!--to do-->"\
+									"<input type='button' value='LED R On' pin='8' s='0' onclick='setDiostate(this);'> "\
+									"<input type='button' value='LED R Off' pin='8' s= '1' onclick='setDiostate(this);'>"\
+									"<br>"\
+									"<input type='button' value='LED B On' pin='9' s='0' onclick='setDiostate(this);'> "\
+									"<input type='button' value='LED B Off' pin='9' s= '1' onclick='setDiostate(this);'>"\
+									"<br>"\
+									"<input type='button' value='LED G On' pin='10' s='0' onclick='setDiostate(this);'> "\
+									"<input type='button' value='LED G Off' pin='10' s= '1' onclick='setDiostate(this);'>"\
 									"</div>"\
+									"<!-- to do -->"\
 								"</body>"\
 							"</html>"
 
@@ -97,11 +104,15 @@ extern uint8_t index_page_array[];
 								"</style>"\
 								"</head>"\
 								"<body>"\
+									"<!-- to do -->"\
 									"<div>"\
-									"<!--to do-->"\
+									"<input type='text' id='txtain_v6' size='5' disabled='disabled' value=''> "\
+									"<input type='button' value='Get AIN' pin='6' onclick='getAin(this);'> "\
+									"<input type='button' value='Get AIN Auto' onclick='getAin6_update();'> "\
 									"<br>"\
 									"<div class='analog' style='padding:0px;'><strong id='ain_v6' name='ain' class='ain' style='width:0%;'></strong></div>"\
 									"</div>"\
+									"<!-- to do -->"\
 								"</body>"\
 							"</html>"
 
