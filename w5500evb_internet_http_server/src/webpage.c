@@ -1,5 +1,6 @@
 #include <stdint.h>
 
+
 uint8_t index_page_array[] = "<html>"\
 								"<head>"\
 								"<title>W5500-EVB Web Server Demo</title>"\
@@ -10,8 +11,13 @@ uint8_t index_page_array[] = "<html>"\
 									"W5500-EVB Web Server Demopage"\
 									"</div>"\
 									"<br>"
-									"<a href='dio.html'>Digital I/O</a>"
+									"<a href='netinfo.html'>Network Information Page</a>"
 									"<br>"
-									"<a href='ain.html'>Analog Input</a>"
+									"<a href='dio.html'>Digital I/O Page</a>"
+									"<br>"
+									"<a href='ain.html'>Analog Input Page</a>"
+									"<br>"
+									"<a href='ain_gauge.html'>Analog Input Page: Google Gauge Chart</a>"
 								"</body>"\
 							"</html>";
+

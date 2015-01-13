@@ -29,7 +29,7 @@ all: w5500evb_internet_http_server.axf
 w5500evb_internet_http_server.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"D:\WIZnet\__Purple\___LPCXpresso_Workspace\wiznet_evb_w5500evb_board\Debug" -L"D:\WIZnet\__Purple\___LPCXpresso_Workspace\lpc_chip_11exx\Debug" -L"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Debug" -Xlinker -Map="w5500evb_internet_http_server.map" -Xlinker --gc-sections -Xlinker --allow-multiple-definition -mcpu=cortex-m0 -mthumb -T "w5500evb_internet_http_server_Debug.ld" -o "w5500evb_internet_http_server.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"D:\WIZnet\__Purple\W5500_EVB\workspace\wiznet_evb_w5500evb_board\Debug" -L"D:\WIZnet\__Purple\W5500_EVB\workspace\lpc_chip_11exx\Debug" -L"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Debug" -Xlinker -Map="w5500evb_internet_http_server.map" -Xlinker --gc-sections -Xlinker --allow-multiple-definition -mcpu=cortex-m0 -mthumb -T "w5500evb_internet_http_server_Debug.ld" -o "w5500evb_internet_http_server.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

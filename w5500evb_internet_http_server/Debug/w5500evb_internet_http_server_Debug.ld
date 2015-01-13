@@ -2,8 +2,8 @@
  * GENERATED FILE - DO NOT EDIT
  * (c) Code Red Technologies Ltd, 2008-${year}
  * (c) NXP Semiconductors 2013-${year}
- * Generated linker script file for 2014
- * Created from LPC11E36/501 (Mon Dec 15 19:47:28 KST 2014)
+ * Generated linker script file for 2015
+ * Created from LPC11E36/501 (Tue Jan 13 10:58:52 KST 2015)
  * By generic_c.ld on LPCXpresso v7.0.0 [Build 92] [2014-02-20] 
  */
 

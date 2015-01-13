@@ -39,7 +39,7 @@ C_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC11EXX__ -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\wiznet_evb_w5500evb_board\inc" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Internet\httpServer" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Ethernet" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Appmod\Loopback" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\lpc_chip_11exx\inc" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\w5500evb_internet_http_server\src" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC11EXX__ -I"D:\WIZnet\__Purple\W5500_EVB\workspace\wiznet_evb_w5500evb_board\inc" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Internet\httpServer" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Ethernet" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Appmod\Loopback" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\lpc_chip_11exx\inc" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\w5500evb_internet_http_server\src" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
@@ -53,7 +53,7 @@ src/%.o: ../src/%.s
 src/cr_startup_lpc11exx.o: ../src/cr_startup_lpc11exx.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC11EXX__ -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\wiznet_evb_w5500evb_board\inc" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Internet\httpServer" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Ethernet" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary\Appmod\Loopback" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\lpc_chip_11exx\inc" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\ioLibrary" -I"D:\WIZnet\__Purple\___LPCXpresso_Workspace\w5500evb_internet_http_server\src" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"src/cr_startup_lpc11exx.d" -o "$@" "$<"
+	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC11EXX__ -I"D:\WIZnet\__Purple\W5500_EVB\workspace\wiznet_evb_w5500evb_board\inc" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Internet\httpServer" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Ethernet" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary\Appmod\Loopback" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\lpc_chip_11exx\inc" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\ioLibrary" -I"D:\WIZnet\__Purple\W5500_EVB\workspace\w5500evb_internet_http_server\src" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"src/cr_startup_lpc11exx.d" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

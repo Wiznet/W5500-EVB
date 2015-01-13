@@ -9,7 +9,6 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Internet/httpServer/subdir.mk
--include Internet/NTP/subdir.mk
 -include Internet/DNS/subdir.mk
 -include Internet/DHCP/subdir.mk
 -include Ethernet/W5500/subdir.mk
