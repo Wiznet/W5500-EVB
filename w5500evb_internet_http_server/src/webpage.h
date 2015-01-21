@@ -172,11 +172,11 @@ extern uint8_t index_page_array[];
 									"<input type='button' value='LED R On' pin='8' s='0' onclick='setDiostate(this);'> "\
 									"<input type='button' value='LED R Off' pin='8' s= '1' onclick='setDiostate(this);'>"\
 									"<br>"\
-									"<input type='button' value='LED B On' pin='9' s='0' onclick='setDiostate(this);'> "\
-									"<input type='button' value='LED B Off' pin='9' s= '1' onclick='setDiostate(this);'>"\
+									"<input type='button' value='LED G On' pin='9' s='0' onclick='setDiostate(this);'> "\
+									"<input type='button' value='LED G Off' pin='9' s= '1' onclick='setDiostate(this);'>"\
 									"<br>"\
-									"<input type='button' value='LED G On' pin='10' s='0' onclick='setDiostate(this);'> "\
-									"<input type='button' value='LED G Off' pin='10' s= '1' onclick='setDiostate(this);'>"\
+									"<input type='button' value='LED B On' pin='10' s='0' onclick='setDiostate(this);'> "\
+									"<input type='button' value='LED B Off' pin='10' s= '1' onclick='setDiostate(this);'>"\
 									"</div>"\
 									"<!-- to do -->"\
 								"</body>"\
@@ -229,8 +229,6 @@ extern uint8_t index_page_array[];
 										"<input type='button' value='Get AIN' pin='6' onclick='getAin(this);'> "\
 										"<input type='button' value='Get AIN Auto' onclick='getAin6_update();'> "\
 										"<br>"\
-										"<div class='analog' style='padding:0px;'><strong id='ain_v6' name='ain' class='ain' style='width:0%;'></strong></div>"\
-										"<br>"\
 										"<!--Draw the Google Gauge Chart-->"\
 										"<div id='chart_div' style='width: 400px; height: 120px;'></div>"\
 									"</div>"\
@@ -239,34 +237,4 @@ extern uint8_t index_page_array[];
 
 
 #endif
-
-
-/*Original Chart Example*/
-/*
-  "<script type='text/javascript' src='https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['gauge']}]}'></script>"\
-*/
-
-/*
-#define ain_gauge_js		"google.setOnLoadCallback(drawChart);"\
-							"function drawChart() {"\
-								"var data = google.visualization.arrayToDataTable(["\
-									"['Label', 'Value'],"\
-									"['Temp.', 80]"\
-								"]);"\
-								"var options = {"\
-									"width:400, height:120,"\
-									"max:100, min:-40,"\
-									"greenFrom:-40, greenTo:0,"\
-									"redFrom:90, redTo:100,"\
-									"yellowFrom:75, yellowTo:90,"\
-									"minorTicks: 5"\
-								"};"\
-								"var chart = new google.visualization.Gauge(document.getElementById('chart_div'));"\
-								"chart.draw(data, options);"\
-								"setInterval(function() {"\
-									"data.setValue(0, 1, 32.1);"\
-									"chart.draw(data, options);"\
-									"}, 1000);"\
-							"}"
-*/
 
