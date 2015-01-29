@@ -1,4 +1,4 @@
-# W5500 EVB
+# W5500 EVB: SNMPv1 Agent
 - W5500 chip development platform for **net'enabled** microcotroller applications
 - Ethernet (W5500 Hardwired TCP/IP chip) and 32-bit ARM® Cortex™-M0 based designs
 - Arduino Pin-compatible platform hardware
@@ -32,14 +32,10 @@ These are libraries source code and example projects based on LPCXpresso IDE.
 Requried Libraries are as below.
 - lpc_chip_11exx (NXP LPC11exx serise chip driver)
 - wiznet_evb_w5500evb_board (WIZnet W5500 EVB board library)
-- ioLibrary (WIZnet W5500 EVB ethernet library and protocols)
 
 Example projects are as below.
-- Basic demos (LED blinky and loopback test)
-- DHCP client
-- DNS clinet
-- On-board Temperature sensor
-- On-board Potentiometer
+- SNMPv1 Agent
+  - ioLibrary included (WIZnet W5500 EVB ethernet library and protocols) 
 
 ## Hardware material, Documents and Others
 Various materials are could be found at [W5500 EVB page](http://wizwiki.net/wiki/doku.php?id=products:w5500:w5500_evb) in WIZnet Wiki.
@@ -56,4 +52,4 @@ Various materials are could be found at [W5500 EVB page](http://wizwiki.net/wiki
 
 
 ## Revision History
-First release : Jun. 2014
+First release : Jan. 2015
