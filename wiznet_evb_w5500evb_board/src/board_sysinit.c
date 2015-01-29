@@ -73,11 +73,11 @@ STATIC const PINMUX_GRP_T pinmuxing[] = {
 	{1,  20, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
 	{1,  23, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
 	{1,  21, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
-	{1,  19, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
+	//{1,  19, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
 
 	/* Button inputs */
-	{0,  1,  (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
-	{0,  16, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
+	//{0,  1,  (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
+	//{0,  16, (IOCON_FUNC0 | IOCON_MODE_PULLUP)},
 };
 
 /*****************************************************************************

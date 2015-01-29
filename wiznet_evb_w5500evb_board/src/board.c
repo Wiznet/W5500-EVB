@@ -28,6 +28,22 @@
 const uint32_t OscRateIn = 12000000;
 const uint32_t ExtRateIn = 0;
 
+const uint8_t dio_pins[DIOn] 	= {D0_PIN, D1_PIN, D2_PIN, D3_PIN,
+								   D4_PIN, D5_PIN, D6_PIN, D7_PIN,
+								   D8_PIN, D9_PIN, D10_PIN, D11_PIN,
+								   D12_PIN, D13_PIN, D14_PIN, D15_PIN
+								  };
+
+const uint8_t dio_ports[DIOn] 	= {D0_GPIO_PORT, D1_GPIO_PORT, D2_GPIO_PORT, D3_GPIO_PORT,
+								   D4_GPIO_PORT, D5_GPIO_PORT, D6_GPIO_PORT, D7_GPIO_PORT,
+								   D8_GPIO_PORT, D9_GPIO_PORT, D10_GPIO_PORT, D11_GPIO_PORT,
+								   D12_GPIO_PORT, D13_GPIO_PORT, D14_GPIO_PORT, D15_GPIO_PORT
+								  };
+
+const uint8_t ain_pins[AINn] 	= {A0_PIN, A1_PIN, A2_PIN, A3_PIN, A4_PIN, A5_PIN, AIN_PTM_TEMP};
+
+const uint8_t adc_channels[AINn] 	= {ADC_CH6, ADC_CH1, ADC_CH2, ADC_CH3, ADC_CH5, ADC_CH7, ADC_CH0};
+
 /*****************************************************************************
  * Private functions
  ****************************************************************************/
@@ -51,6 +67,19 @@ int Board_UARTGetChar(void)
 	uint8_t data;
 
 	if (Chip_UART_Read(DEBUG_UART, &data, 1) == 1) {
+		return (int) data;
+	}
+#endif
+	return EOF;
+}
+
+/* Gets a character from the UART on blocking mode, returns EOF if no character is ready */
+int Board_UARTGetCharBlocking(void)
+{
+#if defined(DEBUG_UART)
+	uint8_t data;
+
+	if (Chip_UART_ReadBlocking(DEBUG_UART, &data, 1) == 1) {
 		return (int) data;
 	}
 #endif

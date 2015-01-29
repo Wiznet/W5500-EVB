@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>wiznet_evb_w5500evb_board</name>
+	<name>SNMP_LPC11E36_LPCXpresso</name>
 	<comment></comment>
 	<projects>
+		<project>wiznet_evb_w5500evb_board</project>
 		<project>lpc_chip_11exx</project>
 	</projects>
 	<buildSpec>
