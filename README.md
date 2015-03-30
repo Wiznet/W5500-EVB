@@ -41,9 +41,10 @@ Example projects are as below.
 - On-board Temperature sensor
 - On-board Potentiometer
 
-### Related Project GitHub Repositories
-- [ioLibrary](https://github.com/Wiznet/ioLibrary_Driver) : Latest WIZnet chip drivers and protocol libraris
+### ioLibrary GitHub Repository
+- [ioLibrary](https://github.com/Wiznet/ioLibrary_Driver) : Latest WIZnet chip drivers and protocol libraries for developers
 
+### Related Project GitHub Repositories
 - [Loopback Test](https://github.com/Wiznet/Loopback_LPC11E36_LPCXpresso): Loopback test example project (TCP server / TCP client / UDP)
 - [HTTP Server](https://github.com/Wiznet/HTTPServer_LPC11E36_LPCXpresso): Web server example project
 - [FTP Server](https://github.com/Wiznet/FTP_LPC11E36_LPCXpresso): FTP server example project
