@@ -5,9 +5,9 @@
 - New Code Samples: [Updated network protocol libraries and example projects](https://github.com/Wiznet/W5500_EVB/blob/master/README.md#related-project-github-repositories)
 
 <!-- W5500 EVB pic -->
-![W5500 EVB](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500-evb_side.png "W5500 EVB")
+![W5500 EVB](https://docs.wiznet.io/assets/images/w5500-evb_side-c64de0fa8b9ee84fab88fea3adcdf544.png "W5500 EVB")
 
-For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.php?id=products:w5500:w5500_evb) in WIZnet Wiki.
+For more details, please refer to [W5500 EVB page](https://docs.wiznet.io/Product/iEthernet/W5500/W5500-EVB) in WIZnet Docs.
 
 ## Features
 - WIZnet W5500 Hardwired TCP/IP chip
@@ -23,9 +23,9 @@ For more details, please refer to [W5500 EVB page](http://wizwiki.net/wiki/doku.
 - 2 x Push button switch(SW), 1 x RGB LED, 4-Mbit External Serial Dataflash memory
 - Ethernet / USB-mini B connector and 10-pin Cortex debug connector for SWD(Serial Wire Debug)
 - W5500 EVB Arduino Compatible Pinout
-![W5500 EVB Arduino Compatible Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_arduino_pin_map.png "W5500 EVB Arduino Compatible Pinout")
+![W5500 EVB Arduino Compatible Pinout](https://docs.wiznet.io/assets/images/w5500_evb_v1.0_arduino_pin_map-a5d39a0bbfa0ae40d2c3bebafc42c9ec.png "W5500 EVB Arduino Compatible Pinout")
 - W5500 EVB External Pinout
-![W5500 EVB External Pinout](http://wizwiki.net/wiki/lib/exe/fetch.php?media=products:w5500:w5500_evb:w5500_evb_v1.0_external_pin_map.png "W5500 EVB External Pinout")
+![W5500 EVB External Pinout](https://docs.wiznet.io/assets/images/w5500_evb_v1.0_external_pin_map-1187deef184bbb109ce0b0ac410e5539.png "W5500 EVB External Pinout")
 
 ## Software
 These are libraries source code and example projects based on LPCXpresso IDE.
@@ -54,7 +54,7 @@ Example projects are as below.
 - [TFTP Client](https://github.com/Wiznet/TFTP_LPC11E36_LPCXpresso): TFTP client example project
 
 ## Hardware material, Documents and Others
-Various materials are could be found at [W5500 EVB page](http://wizwiki.net/wiki/doku.php?id=products:w5500:w5500_evb) in WIZnet Wiki.
+Various materials are could be found at [W5500 EVB page](https://docs.wiznet.io/Product/iEthernet/W5500/W5500-EVB) in WIZnet Docs.
 - Documents
   - Getting Started: Hello world! / Downloading a new program
   - Make New W5500 EVB Projects
